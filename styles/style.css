@@ -1,4 +1,86 @@
-.containerImages {
-  display: flex;
+:root {
+  --element-bg-color: rgb(75, 80, 92);
+  --element-hover-bg-color: rgb(216, 216, 216);
+  
+  
+}
 
+body {
+  background-color: rgb(29, 32, 39);
+}
+
+.containerImages {
+  width: 70vw;
+  height: 90vh;
+  margin: 0 auto;
+  margin-top: 2vh;
+  border: 1px black solid;
+  overflow: hidden;
+}
+
+.imageContent {
+  width: 480vw;
+}
+
+.image {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 70vw;
+  height: 90vh;
+}
+
+.slideRight {
+  transform: translateX(-70vw);
+}
+
+.slideLeft {
+  transform: translateX(70vw);
+}
+
+
+.slideControl {
+  position: absolute;
+  color: var(--element-bg-color);
+  font-size: 120px;
+  top: 50%;
+  text-align: center;
+  height: 40px;
+}
+
+.slideControl:hover {
+  cursor: pointer;
+  color: var(--element-hover-bg-color);
+}
+
+#leftBtn {
+  left: 5vw;
+}
+
+#rightBtn {
+  right: 5vw; 
+}
+
+.containerBtns {
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  width: 70vw;
+}
+
+.slideBtns {
+  width: 0.9vw;
+  height: 0.9vw;
+  background-color: var(--element-bg-color);
+  border-radius: 50%;
+  margin: 3px;
+}
+
+.slideBtns:hover {
+  background-color: var(--element-hover-bg-color);
+  cursor: pointer;
+}
+
+.activeImage {
+  background-color: var(--element-hover-bg-color);
 }

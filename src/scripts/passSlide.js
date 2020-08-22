@@ -1,9 +1,17 @@
+import { goToSlide } from "./goToSlide";
+
+const imageContent = document.querySelector(".imageContent");
+
+let i = 0;
+
 function slideRight() {
-	console.log("works1");
+	i = i - 70;
+	goToSlide(i);
 }
 
 function slideLeft() {
-	console.log("works2");
+	i = i + 70;
+	goToSlide(i);
 }
 
 export { slideLeft, slideRight };

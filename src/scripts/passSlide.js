@@ -1,16 +1,22 @@
 import { goToSlide } from "./goToSlide";
 
-const imageContent = document.querySelector(".imageContent");
-
 let i = 0;
 
 function slideRight() {
-	i = i - 70;
+	if (i != -350) {
+		i = i - 70;
+	} else {
+		i = 0;
+	}
 	goToSlide(i);
 }
 
 function slideLeft() {
-	i = i + 70;
+	if (i != 0) {
+		i = i + 70;
+	} else {
+		i = -350;
+	}
 	goToSlide(i);
 }
 
